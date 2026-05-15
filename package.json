@@ -1,0 +1,16 @@
+{
+  "name": "hau-mai-ticket-bot",
+  "version": "1.0.0",
+  "description": "Worker xử lý tự động quy trình hậu mãi vé và merch",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "author": "Phòng Công Nghệ",
+  "license": "ISC",
+  "dependencies": {
+    "camunda-external-task-client-js": "^2.3.1",
+    "nodemailer": "^8.0.7",
+    "dotenv": "^16.4.5"
+  }
+}
