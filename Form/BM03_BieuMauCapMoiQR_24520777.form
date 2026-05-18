@@ -1,0 +1,86 @@
+{
+  "components": [
+    {
+      "text": "### Cấp phát vé QR/vòng tay mới\nNhập mã định danh của vật phẩm mới để đồng bộ lên hệ thống.",
+      "type": "text",
+      "id": "Field_Title_3",
+      "layout": {
+        "row": "Row_0z9n7nz"
+      }
+    },
+    {
+      "label": "Loại vật phẩm cấp mới",
+      "values": [
+        {
+          "label": "Vòng tay giấy/nhựa",
+          "value": "wristband"
+        },
+        {
+          "label": "Vé QR cấp lại",
+          "value": "paper_qr"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_1",
+        "columns": null
+      },
+      "id": "Field_newItemType",
+      "key": "txtloaivatphammoi",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Mã Serial / QR của vật phẩm mới",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_2",
+        "columns": null
+      },
+      "id": "Field_newTicketId",
+      "key": "txtmamoi",
+      "validate": {
+        "required": true
+      },
+      "description": "Dùng súng bắn mã vạch hoặc nhập tay mã Serial trên vòng tay mới."
+    },
+    {
+      "label": "Email khách hàng nhận thông báo mã mới",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_email",
+        "columns": null
+      },
+      "id": "Field_customerEmail",
+      "key": "txtemailkhachhang",
+      "validate": {
+        "required": true,
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      },
+      "description": "Nhập địa chỉ email của khách hàng để hệ thống tự động gửi mã vé"
+    },
+    {
+      "label": "Khách hàng đã nhận vé QR/ vòng tay mới",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_3",
+        "columns": null
+      },
+      "id": "Field_confirmIssue",
+      "key": "txtchecknhan",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CapMoi",
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.24.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.44.0"
+  },
+  "schemaVersion": 19
+}

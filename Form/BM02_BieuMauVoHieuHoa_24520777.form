@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "text": "### Thao tác Vô hiệu hóa QR/Vé cũ\nXác nhận thu hồi hoặc hủy bỏ vé vật lý/QR hiện tại của khách hàng tại quầy.",
+      "type": "text",
+      "id": "Field_Title_2",
+      "layout": {
+        "row": "Row_1f6jug1"
+      }
+    },
+    {
+      "label": "Mã vé cũ / Serial Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1",
+        "columns": null
+      },
+      "id": "Field_oldTicketId",
+      "key": "txtmavecu",
+      "validate": {
+        "required": true
+      },
+      "description": "Nhập mã vé cũ hoặc quét mã vạch"
+    },
+    {
+      "label": "Lý do vô hiệu hóa",
+      "values": [
+        {
+          "label": "Vòng tay bị đứt/hỏng",
+          "value": "broken_wristband"
+        },
+        {
+          "label": "Mã QR mờ không quét được",
+          "value": "unreadable_qr"
+        },
+        {
+          "label": "Mất vé (có CMND đối chiếu)",
+          "value": "lost_ticket"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_2",
+        "columns": null
+      },
+      "id": "Field_invalidateReason",
+      "key": "txtlydo"
+    },
+    {
+      "label": "Tôi xác nhận đã hủy vé này",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_3",
+        "columns": null
+      },
+      "id": "Field_confirmInvalidate",
+      "key": "txtcheckhuy",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_VoHieuHoa",
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.24.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.44.0"
+  },
+  "schemaVersion": 19
+}

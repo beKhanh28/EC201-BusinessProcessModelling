@@ -1,0 +1,99 @@
+{
+  "components": [
+    {
+      "text": "### Thông tin yêu cầu hậu mãi\nXem xét thông tin khách hàng và tình trạng vé/merch để ra quyết định.",
+      "type": "text",
+      "id": "Field_Title_1"
+    },
+    {
+      "label": "Mã đơn hàng (Order ID)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1",
+        "columns": null
+      },
+      "id": "Field_orderId",
+      "key": "txtmadonhang",
+      "disabled": true
+    },
+    {
+      "label": "Phân loại yêu cầu",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1",
+        "columns": null
+      },
+      "id": "Field_requestType",
+      "key": "txtphanloaiyeucau",
+      "disabled": true
+    },
+    {
+      "label": "Trạng thái vé hiện tại",
+      "values": [
+        {
+          "label": "Chưa sử dụng (Hợp lệ để hoàn/đổi)",
+          "value": "unused"
+        },
+        {
+          "label": "Đã check-in/Đã sử dụng",
+          "value": "used"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_2",
+        "columns": null
+      },
+      "id": "Field_ticketStatus",
+      "key": "txttrangthaive",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Quyết định thẩm định",
+      "values": [
+        {
+          "label": "Đồng ý (Duyệt yêu cầu)",
+          "value": "true"
+        },
+        {
+          "label": "Từ chối",
+          "value": "false"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_3",
+        "columns": null
+      },
+      "id": "Field_decision",
+      "key": "txtquyetdinh",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Lý do từ chối (Chỉ nhập nếu Từ chối)",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_4",
+        "columns": null
+      },
+      "id": "Field_rejectReason",
+      "key": "txtlydotuchoi",
+      "conditional": {
+        "hide": "=isApproved = \"true\""
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ThamDinhYeuCau",
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.24.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.44.0"
+  },
+  "schemaVersion": 19
+}
